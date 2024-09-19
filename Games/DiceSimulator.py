@@ -11,10 +11,10 @@ def roll_dice(amount: int = 2) -> list [int]:
 
     return rolls
 
-def main():
+def DiceSimulator_main():
     while True:
         try:
-            user_input: str = input('How many dice would you like to roll? ')
+            user_input: str = input('How many dice would you like to roll? (stop by typing exit)')
 
             if user_input.lower() == 'exit':
                 print('Thanks you for playing!')
@@ -24,8 +24,8 @@ def main():
         except ValueError:
             print('(Please enter a valid number)')
 
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+#    main()
 
 
 
