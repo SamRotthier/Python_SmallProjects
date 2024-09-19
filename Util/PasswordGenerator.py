@@ -43,7 +43,7 @@ def generate_password(length: int, symbols: bool, uppercase: bool) -> str:
 #print(string.punctuation, string.ascii_lowercase, string.ascii_uppercase, string.digits)
 
 if __name__ == '__main__':
-    for i in range(1,6):
-        new_pass: str = generate_password(length=3, symbols=False, uppercase= True)
-        specs: str = f'U: {contains_upper(new_pass)}, S:{contains_symbols(new_pass)}'
+    for i in range(1,6): #amounts of passwords generated here 
+        new_pass: str = generate_password(length=10, symbols=True, uppercase= True) #Password parameters here
+        specs: str = f'U: {contains_upper(new_pass)}, S:{contains_symbols(new_pass)}' #Checks if passwords pass the wanted checks
         print(f'{i}-> {new_pass} ({specs})')
