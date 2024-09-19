@@ -1,4 +1,5 @@
 from random import choice
+import string
 
 def Hangman_game(): #run_game
     word: str = choice(['apple','secret','banana'])
@@ -32,6 +33,12 @@ def Hangman_game(): #run_game
         if guess in guessed:
             print(f'You already used: "{guess}". Please try with another letter!')
             continue
+        if len(guess)>1:
+            print(f'You can not guess more then 1 letter')
+            continue
+        if guess in string.digits:
+            print(f'You can not guess a number')
+            continue
 
         guessed += guess
 
@@ -44,4 +51,4 @@ def Hangman_game(): #run_game
                 break
 
 #if __name__ == '__main__':
-#    run_game()
+#    Hangman_game()
