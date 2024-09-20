@@ -6,6 +6,10 @@
 #This is done by (going to the right directory and) running the following code:
 # python -m venv venv1   
 # source venv1/bin/activate  
+
+# You can stop using it with the following command:
+# deactivate
+
 #Later you can use the following command to run the code:
 # d:/Projects/Python/Python_SmallProjects/Util/QRCodeGenerator/venv1/Scripts/python.exe d:/Projects/Python/Python_SmallProjects/Util/QRCodeGenerator/QRCodeGenerator.py
 
