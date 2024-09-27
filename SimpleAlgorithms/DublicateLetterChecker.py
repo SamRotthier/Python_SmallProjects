@@ -8,6 +8,9 @@ def main():
           else:
                 seen_letters.append(c)
                 print(seen_letters)
+
+
+    
     
 
 if __name__ == '__main__':
