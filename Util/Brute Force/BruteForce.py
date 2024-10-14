@@ -28,12 +28,12 @@ def brute_force(word: str, length: int, digits:bool = False, symbols: bool = Fal
         if guess == word:
             return f'"{word}" was cracked in {attempts:,} guesses.'
          
-        #print(guess, attempts)
+        print(guess, attempts)
          
 
 def main():
     print('Searching...')
-    password: str = 'bbbbbb'
+    password: str = 'bbbbb' #enter word here
 
     start_time: float = time.perf_counter()
 
