@@ -1,5 +1,6 @@
+import os
 
-txt_path = 'Python_SmallProjects/Util/PasswordChecker/passwords.txt'
+txt_path = os.path.join(os.path.dirname(__file__),'./passwords.txt') #Python_SmallProjects/Util/PasswordChecker/passwords.txt
 
 def check_password(password: str):
     with open(txt_path, 'r') as file:
@@ -12,9 +13,9 @@ def check_password(password: str):
             return
     print(f'{password}:✅ (Unique)')
 
-def main():
+def main_passwordChecker():
     user_password: str = input('Enter a password: ')
     check_password(user_password)
 
 if __name__ == '__main__':
-    main()
+    main_passwordChecker()

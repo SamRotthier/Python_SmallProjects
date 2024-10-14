@@ -1,9 +1,12 @@
 import itertools
 import string
 import time
+import os
+
+txt_path = os.path.join(os.path.dirname(__file__), 'words.txt')
 
 def common_guess(word: str) -> str | None:
-    with open('words.txt', 'r')as words:
+    with open(txt_path, 'r')as words:
         word_list : list[str] = words.read().splitlines()
 
     for i, match in enumerate(word_list, start=1):
@@ -30,18 +33,27 @@ def brute_force(word: str, length: int, digits:bool = False, symbols: bool = Fal
          
         print(guess, attempts)
          
+def hasDigits(s):
+    return any(i.isdigit() for i in s)
 
-def main():
+def hasSymbols(s):
+    for i in s:
+        if (not i.isnumeric() and not i.isdigit()):
+            return True
+
+def main_bruteForce():
     print('Searching...')
-    password: str = 'bbbbb' #enter word here
+    password: str = input('What password should we check for brute force: ') #'bbbbb' #enter word here
+    digits_password: bool = hasDigits(password)
+    symbols_password: str = hasSymbols(password)
 
     start_time: float = time.perf_counter()
 
     if common_match:=common_guess(password):
         print(common_match)
     else:
-        for i in range(3,6):
-            if cracked :=brute_force(password,length=i,digits=False,symbols=False):
+        for i in range(1,len(password)+1): #Enter the length of the search here, range(3,6) for the example above
+            if cracked :=brute_force(password,length= i, digits= digits_password ,symbols=symbols_password):
                 print(cracked)
                 break
             else:
@@ -52,5 +64,5 @@ def main():
 
 
 if __name__ == '__main__':
-        main()
+        main_bruteForce()
 

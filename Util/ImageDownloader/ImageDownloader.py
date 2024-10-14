@@ -4,6 +4,8 @@
 import os
 import requests
 
+folder_path = os.path.join(os.path.dirname(__file__),'./images')
+
 def get_extension(image_url: str) -> str | None:
     extensions: list[str] = ['.png', '.jpeg', '.jpg', '.gif', '.svg']
     for ext in extensions:
@@ -33,10 +35,12 @@ def download_image(image_url: str, name: str, folder: str = None):
     except Exception as e:
         print(f'Error: {e}')
 
-
-if __name__ == '__main__':
+def main_imageDownloader():
     input_url: str = input('Enter a url:')
     input_name: str = input('What would you like to name it:')
 
     print('Downloading...')
-    download_image(input_url, name=input_name, folder='images')
+    download_image(input_url, name=input_name, folder=folder_path)
+
+if __name__ == '__main__':
+    main_imageDownloader()

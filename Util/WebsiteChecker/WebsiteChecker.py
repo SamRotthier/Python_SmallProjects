@@ -4,8 +4,9 @@ import csv
 import requests 
 from fake_useragent import UserAgent
 from http import HTTPStatus
+import os
 
-csv_path = 'Python_SmallProjects/Util/WebsiteChecker/website.csv'
+csv_path = os.path.join(os.path.dirname(__file__),'./website.csv') #Python_SmallProjects/Util/WebsiteChecker/website.csv
 
 def get_websites(csv_path: str) -> list[str]:
     websites: list[str] = []
@@ -42,7 +43,7 @@ def check_website(website: str, user_agent):
     except Exception:
         print(f'**Could not get information for the website:"{website}"')
     
-def main():
+def main_websiteChecker():
     sites: list[str] = get_websites(csv_path)
     user_agent: str = get_user_agent()
 
@@ -50,4 +51,4 @@ def main():
         check_website(site, user_agent)
 
 if __name__ == '__main__':
-        main()
+        main_websiteChecker()
