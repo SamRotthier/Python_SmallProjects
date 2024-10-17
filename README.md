@@ -6,3 +6,4 @@ pip install:
 - Pillow
 - customtkinter
 - fake_useragent
+- textblob
