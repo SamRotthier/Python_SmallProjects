@@ -10,3 +10,4 @@ pip install:
 - fake_useragent
 - textblob
 - pypdf2
+- selenium
