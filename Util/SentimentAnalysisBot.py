@@ -24,7 +24,7 @@ def get_mood(input_text: str, *, sensitivity: float) -> Mood:
     else:
         return Mood('😐', polarity)
 
-def run_bot():
+def run_sentiment_bot():
     print('Enter some text to get a sentiment analysis back:')
     while True:
         user_input: str = input('You: ')
@@ -32,4 +32,4 @@ def run_bot():
         print(f'Bot: {mood.emoji} ({mood.sentiment})')
 
 if __name__ == '__main__':
-    run_bot()
+    run_sentiment_bot()

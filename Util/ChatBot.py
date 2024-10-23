@@ -1,5 +1,10 @@
 from difflib import get_close_matches
 
+brain: dict= {'hello': 'Hey there!',
+                      'how are you': 'I am good, thanks!',
+                      'what time is it': 'Don\'t know, dont\'t care...',
+                      'bye' : 'See you!'}
+
 def get_best_match(user_question: str, questions: dict) -> str | None:
     questions: list[str] = [q for q in questions]
     matches: list = get_close_matches(user_question, questions, n=1, cutoff=0.6)
@@ -17,10 +22,8 @@ def chat_bot(knowledge: dict):
         else:
             print('Bot: I do not understand...')
 
-if __name__ == '__main__':
-    brain: dict= {'hello': 'Hey there!',
-                      'how are you': 'I am good, thanks!',
-                      'what time is it': 'Don\'t know, dont\'t care...',
-                      'bye' : 'See you!'}
+def chat_bot_start():
+    chat_bot(knowledge=brain)
 
+if __name__ == '__main__':
     chat_bot(knowledge=brain)

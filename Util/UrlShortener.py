@@ -20,9 +20,9 @@ def shorten_link(full_link: str):
         else:
             print('Errpr status: ', url_data['status'])
 
-def main():
+def main_url_shortener():
     input_link: str = input('Enter a link: ')
     shorten_link(input_link)
 
 if __name__ == '__main__':
-    main()
+    main_url_shortener()

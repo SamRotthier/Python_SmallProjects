@@ -35,7 +35,7 @@ def remove_empty_folders(source_path: str):
                 os.rmdir(folder_path)
 
 
-def main():
+def main_file_sorter():
     user_input: str = input('Please provide a file path to sort: ')
 
     if os.path.exists(path=user_input):
@@ -47,4 +47,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main_file_sorter()

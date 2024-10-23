@@ -10,6 +10,11 @@ from Util.PasswordChecker.PasswordChecker import *
 from Util.BruteForce.BruteForce import *
 from Util.ImageDownloader.ImageDownloader import *
 from Util.TaxCalculator import *
+from Util.FileSorter import *
+from Util.SentimentAnalysisBot import *
+from Util.UrlShortener import *
+from Util.PdfTextExtractor.PdfReader import *
+from Util.ChatBot import *
 
 while True:
     try:
@@ -61,6 +66,11 @@ while True:
             print("5)Brute Force tester")
             print("6)Image Downloader")
             print("7)Tax calculator (front end)")
+            print("8)File Sorter")
+            print("9)Sentiment Analysis Bot")
+            print("10)URL Shortener")
+            print("11)PDF Reader")
+            print("12)Chat Bot")
             Util_Choice : int = int(input('Choice: '))
         except ValueError as e:
             print('Please eneter a valid number.')
@@ -86,6 +96,21 @@ while True:
             continue
         elif(Util_Choice == 7):
             main_taxCalc()
+            continue
+        elif(Util_Choice == 8):
+            main_file_sorter()
+            continue
+        elif(Util_Choice == 9):
+            run_sentiment_bot()
+            continue
+        elif(Util_Choice == 10):
+            main_url_shortener()
+            continue
+        elif(Util_Choice == 11):
+            main_pdf_reader()
+            continue
+        elif(Util_Choice == 11):
+            chat_bot_start()
             continue
 
 

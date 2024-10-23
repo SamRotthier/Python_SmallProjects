@@ -27,7 +27,7 @@ def count_words(text_list: list[str])-> Counter:
           all_words += [word for word in split_text if word]
     return Counter(all_words)
 
-def main():
+def main_pdf_reader():
     extracted_text: list[str] = extract_text_from_pdf(pdf_path)
     #print(extracted_text)
     counter: Counter = count_words(text_list=extracted_text)
@@ -39,4 +39,4 @@ def main():
          print(f'{word:10}: {mentions} times')
 
 if __name__ == '__main__':
-        main()
+        main_pdf_reader()
