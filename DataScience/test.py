@@ -16,3 +16,15 @@ a = 42.5
 print(a)
 a = True
 print(a)
+
+var = 'Python', 
+print(type(var)) #<class 'tuple'>
+
+a = [1, 2, 3] 
+b = [1, 2, 3] 
+print(a is b) #"a is b" will return False because they are not the same object.
+
+var = 3 * ['a']
+print(var)
+
+print(10 // 3) #Floor devision

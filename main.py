@@ -16,6 +16,7 @@ from Util.UrlShortener import *
 from Util.PdfTextExtractor.PdfReader import *
 from Util.ChatBot import *
 
+
 while True:
     try:
         print("What would you like to do:")
