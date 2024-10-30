@@ -11,3 +11,4 @@ pip install:
 - textblob
 - pypdf2
 - selenium
+- flask
