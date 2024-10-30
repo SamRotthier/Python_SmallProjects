@@ -28,3 +28,7 @@ var = 3 * ['a']
 print(var)
 
 print(10 // 3) #Floor devision
+
+for i in range(100): #Every time we loop through "range(100)", we assign a value to "i". This assignment persists even after the loop has terminated. 99 was the last value assigned, so that's new value of "i".
+    pass 
+print(i)

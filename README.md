@@ -12,3 +12,5 @@ pip install:
 - pypdf2
 - selenium
 - flask
+- pandas
+- tabulate

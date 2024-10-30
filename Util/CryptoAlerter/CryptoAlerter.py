@@ -1,5 +1,5 @@
 import time
-from Crypto_Data import get_coins, Coin
+from CryptoData import get_coins, Coin
 
 def alert(symbol: str, bottom: float, top: float, coins_list: list[Coin]):
     for coin in coins_list:
