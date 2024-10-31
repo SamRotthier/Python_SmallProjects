@@ -14,3 +14,4 @@ pip install:
 - flask
 - pandas
 - tabulate
+- beautifulsoup4
