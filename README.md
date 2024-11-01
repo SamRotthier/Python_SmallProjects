@@ -15,3 +15,4 @@ pip install:
 - pandas
 - tabulate
 - beautifulsoup4
+- geopy
