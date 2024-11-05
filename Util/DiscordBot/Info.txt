@@ -1,0 +1,18 @@
+To start go to developer portal
+https://discord.com/developers/applications
+
+press: New application
+chose an application name like: Sample Bot App
+
+go to the bot tab
+you can change the image and give it a user name (like: Luigi Luigi).
+also tap on reset token.
+scroll down to the "Message Content Intent" and enable it
+Save the changes
+
+Go to OAuth2 tab and select URL Generator
+select "Bot" and select permissions (all the text permissions)
+copy the generated link and past it on a new browser tab.
+There select the right server and say ok to the permissions
+Bot will not be added to the server.
+
