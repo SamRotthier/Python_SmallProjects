@@ -18,3 +18,4 @@ pip install:
 - geopy
 - scikit-learn
 - matplotlib
+- python-telegram-bot
