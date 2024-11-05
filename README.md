@@ -16,3 +16,5 @@ pip install:
 - tabulate
 - beautifulsoup4
 - geopy
+- scikit-learn
+- matplotlib
