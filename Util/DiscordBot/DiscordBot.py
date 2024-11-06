@@ -43,11 +43,8 @@ def run_bot(token: str):
     client.run(token=token)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     run_bot(token='TOKEN')
-=======
-    run_bot(token='MTEyMDYwMTA3NjQwNDYwNDk10A.GlK5hZ.ZHzZd7tuEBRJATmtpduvjhtveLukx6H1DeQQGk')
->>>>>>> 4dcd2dc9ef9aa5ab89742ef1929e44e48c4580f5
+
 
 # Improvements:
 #   - Make more commands and functionality
