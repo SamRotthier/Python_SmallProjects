@@ -39,7 +39,11 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Constants
+<<<<<<< HEAD
 TOKEN: Final[str]= 'TOKEN'
+=======
+TOKEN: Final[str]= '585303001:AAHQCgo-fKd7ksVZZJ-eIpsAopasGAyziCQ' #this token probably wont work
+>>>>>>> 4dcd2dc9ef9aa5ab89742ef1929e44e48c4580f5
 BOT_USERNAME: Final[str] = '@cool_abc_bot'
 
 # Commands
