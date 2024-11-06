@@ -110,7 +110,7 @@ while True:
         elif(Util_Choice == 11):
             main_pdf_reader()
             continue
-        elif(Util_Choice == 11):
+        elif(Util_Choice == 12):
             chat_bot_start()
             continue
 

@@ -18,11 +18,18 @@ class Coin:
         return f'{self.name} ({self.symbol}): €{self.current_price:,}'
     
 def get_coins() -> list[Coin]:
+    """
+    Gets coins from an api and returns them as a list[Coin]
+    API: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur
+    """
+
+    # Make the request in euros
     payload: dict = {'vs_currency': 'eur', 'order': 'market_cap_desc'}
     data = requests.get(BASE_URL, params=payload)
     json: dict = data.json()
     #print(json)
 
+    # Create coins and add them to a coin list
     coin_list: list[Coin] = []
     for item in json: 
         current_coin : Coin = Coin(name=item.get('name'),

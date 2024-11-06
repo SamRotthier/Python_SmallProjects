@@ -33,7 +33,7 @@ class DodgySquare:
         self.enemy_size: int = 50
         self.enemy_pos: list[int] = []
         self.enemy_list = []
-        self.enemy_speed: float = 3
+        self.enemy_speed: float = 3 # Low = slow, High = Fast
         self.enemy_frequency: int = 20 #Low = lots, high = few enemies
 
         # Clock
@@ -46,26 +46,38 @@ class DodgySquare:
 
 
     def create_enemy(self):
+        """Creates a new enemy at a random position"""
+
         enemy_pos: list[int] = [random.randint(0, self.screen_width - self.enemy_size), -self.enemy_size] #(X: makes sure the enemies are not falling off the screen, Y: the enemies will come from above the screen)
         self.enemy_list.append(enemy_pos)
 
+    # Function to update enemy positions
     def update_enemy_positions(self):
+        """Check whether it is time to create a new enemy and then does so"""
+
         if self.frame_count % self.enemy_frequency == 0: #movement will be by framecount
             self.create_enemy()
         
+        # Give each enemy an id
         for idx, enemy_pos in enumerate(self.enemy_list):
+            # Simulate gravity until off-screen
             if -self.enemy_size <= enemy_pos[1] < self.screen_height:
                 enemy_pos[1] += self.enemy_speed
             else:
+                # When the enemy has passed
                 self.enemy_list.pop(idx)
                 self.score += 1
                 self.enemy_speed += 0.1
+
+                # Increase the difficulty each 15 points
                 if self.enemy_frequency > 10:
                     if self.score % 15 == 0:
                         self.enemy_frequency -=2
                         print(self.score, self.enemy_frequency, sep=' -> ') #example of log message
 
     def detect_collision(self, player_pos: list[int], enemy_pos: list[int]) -> bool:
+        """Collision detection logic for checking if squares are intercepting"""
+
         px, py = player_pos
         ex, ey = enemy_pos
 
@@ -74,11 +86,22 @@ class DodgySquare:
                 return True
         return False
 
+    # Game over text
     def show_game_over(self):
+        """Display game-over text"""
+
+        # Create the text
         game_over_text= self.font.render('Game Over', True, self.WHITE)
-        self.screen.blit(game_over_text, (self.screen_width // 2 - 70, self.screen_height // 2 - 16))
+
+        # Make sure the text is centred
+        text_width, text_height = game_over_text.get_size()
+        coordinates: tuple = (self.screen_width // 2 - text_width // 2, self.screen_height // 2 - text_height // 2)
+        self.screen.blit(game_over_text, coordinates)
+        #self.screen.blit(game_over_text, (self.screen_width // 2 - 70, self.screen_height // 2 - 16)) #Old
 
     def replay_game(self):
+        """Reset everything to its initial state"""
+
         # Reset enemies
         self.enemy_list = []
         self.enemy_speed: float = 3
@@ -90,16 +113,20 @@ class DodgySquare:
         self.score: int = 0
 
     def draw_character(self, color: tuple, position: list[int], size: int):
+        """Draws a rectangle on the screen"""
         pygame.draw.rect(self.screen, color, (position[0], position[1], size, size))
 
+     # Main game loop
     def run(self):
+        """Run the game"""
+
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
 
-                # Reset game
+                # Handle key events
                 if event.type == pygame.KEYDOWN:
                     if self.game_over and event.key == pygame.K_r: #Press R to replay the game
                         self.replay_game()
@@ -118,6 +145,7 @@ class DodgySquare:
             if not self.game_over:
                 self.update_enemy_positions()
 
+                # Check for collisions
                 for enemy_pos in self.enemy_list:
                     if self.detect_collision(self.player_pos, enemy_pos):
                         self.game_over = True
@@ -146,7 +174,10 @@ class DodgySquare:
             else:
                 self.show_game_over()
                 
+            # Update the display
             pygame.display.update()
+        
+            # Frame rate
             self.clock.tick(60)
 
 

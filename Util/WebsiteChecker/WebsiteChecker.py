@@ -9,6 +9,8 @@ import os
 csv_path = os.path.join(os.path.dirname(__file__),'./website.csv') #Python_SmallProjects/Util/WebsiteChecker/website.csv
 
 def get_websites(csv_path: str) -> list[str]:
+    """Loads websites from a csv file"""
+
     websites: list[str] = []
     with open(csv_path, 'r') as file:
         reader = csv.reader(file)
@@ -23,12 +25,16 @@ def get_websites(csv_path: str) -> list[str]:
 #print(get_websites(csv_path))
 
 def get_user_agent() -> str:
+    """Returns a user agent that can be used with requests"""
+    
     ua = UserAgent()
     return ua.chrome #if you get back a forbidden, you can try other agents
 
 #print(get_user_agent())
 
 def get_status_description(status_code: int) -> str:
+    """Uses the status code to return a readable description"""
+
     for value in HTTPStatus:
         if value == status_code:
             description: str = f'({value} {value.name}) {value.description}'
@@ -37,6 +43,8 @@ def get_status_description(status_code: int) -> str:
     return '(???) Unknown status code'
 
 def check_website(website: str, user_agent):
+    """Gets that status code for a website and prints the result"""
+
     try:
         code: int = requests.get(website,headers={'User-Agent': user_agent}).status_code
         print(website,get_status_description(code))
@@ -47,6 +55,7 @@ def main_websiteChecker():
     sites: list[str] = get_websites(csv_path)
     user_agent: str = get_user_agent()
 
+    # Check websites
     for site in sites:
         check_website(site, user_agent)
 
