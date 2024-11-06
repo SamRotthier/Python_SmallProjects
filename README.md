@@ -20,6 +20,7 @@ pip install:
 - matplotlib
 - python-telegram-bot
 - discord
+- pygame
 
 
 
@@ -53,4 +54,4 @@ projects from course:
 27. Value Prediction
 28. Telegram Bot
 29. Discord Bot
-30.
+30. Dodgy Square
