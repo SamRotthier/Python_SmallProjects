@@ -40,3 +40,6 @@ def main_pdf_reader():
 
 if __name__ == '__main__':
         main_pdf_reader()
+
+# Improvements:
+#   - Add extra functionality like how many characters or words there are

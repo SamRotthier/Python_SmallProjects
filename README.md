@@ -1,30 +1,12 @@
-This is a collection of a few small python projects.
-Most of them are from the Udemy course "30 Great Python Projects To Help You Master It In 2024
-"
+# This is a collection of a few small python projects.
+I use this as a "Tryout Park" for Python.
 
-pip install:
-- requests
-- qrcode
-- Pillow
-- customtkinter
-- fake_useragent
-- textblob
-- pypdf2
-- selenium
-- flask
-- pandas
-- tabulate
-- beautifulsoup4
-- geopy
-- scikit-learn
-- matplotlib
-- python-telegram-bot
-- discord
-- pygame
+## Learned lessons
+You can make a requirements file with the command "pip freeze > requirements.txt"
 
-
-
-projects from course:
+# Course
+Most of the projects are from the Udemy course "30 Great Python Projects To Help You Master It In 2024"
+## projects from the course:
 1. Mad Libs
 2. Number Guessing
 3. Dice Simulator
@@ -55,3 +37,24 @@ projects from course:
 28. Telegram Bot
 29. Discord Bot
 30. Dodgy Square
+
+## Installed packages from course
+Installed packages with "pip install" for this project:
+- requests
+- qrcode
+- Pillow
+- customtkinter
+- fake_useragent
+- textblob
+- pypdf2
+- selenium
+- flask
+- pandas
+- tabulate
+- beautifulsoup4
+- geopy
+- scikit-learn
+- matplotlib
+- python-telegram-bot
+- discord
+- pygame
