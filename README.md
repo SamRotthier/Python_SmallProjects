@@ -2,7 +2,12 @@
 I use this as a "Tryout Park" for Python.
 
 ## Learned lessons
-You can make a requirements file with the command "pip freeze > requirements.txt"
+- You can make a requirements file with the command "pip freeze > requirements.txt"
+- When trying to use a overviewing file normal imports in the script won't always work, thats why you see some of these imports:
+    try:
+        from . import Responses  # Relative import for package execution
+    except ImportError:
+        import Responses   # Direct execution
 
 # Course
 Most of the projects are from the Udemy course "30 Great Python Projects To Help You Master It In 2024"

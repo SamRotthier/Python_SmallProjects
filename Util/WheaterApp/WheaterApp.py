@@ -1,8 +1,12 @@
 #https://openweathermap.org/api
 
-from WheatherApi import get_weather, get_weather_details, Weather
+try:
+    from .WheatherApi import get_weather, get_weather_details, Weather  # Relative import for package execution
+except ImportError:
+    from WheatherApi import get_weather, get_weather_details, Weather # Direct execution
 
-def main():
+
+def main_weatherApp():
     # Ask the user for their city
     user_city: str = input('Enter a city:')
 
@@ -26,7 +30,7 @@ def main():
         print('') # An Empty line
 
 if __name__ == '__main__':
-    main()
+    main_weatherApp()
 
 # Improvements:
 #   - Catch the error when it does not find a city

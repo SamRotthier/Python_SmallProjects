@@ -46,7 +46,7 @@ def get_distance_km(home: str, target: str) -> float | None:
     else:
         print('Failed to calculate the distance')
 
-def main():
+def main_distanceConverter():
     # Start address for testing
     home_address: str =  'helsinkigade 10, Copenhagen 2150, Denmark'
     print(f'Home address: {home_address}')
@@ -59,7 +59,7 @@ def main():
 
 
 if __name__ == '__main__':
-        main()
+        main_distanceConverter()
 
 # Improvements:
 #   - Add some sort of calculations for shipment costs (example for 20km its free, above 50km its 10 euros and above 100 its 100000)

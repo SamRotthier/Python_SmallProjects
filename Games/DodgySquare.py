@@ -180,10 +180,12 @@ class DodgySquare:
             # Frame rate
             self.clock.tick(60)
 
-
-if __name__ == '__main__':
+def main_run_DS():
     game = DodgySquare()
     game.run()
+
+if __name__ == '__main__':
+    main_run_DS()
 
 #Improvements:
 #   - Add a start screen

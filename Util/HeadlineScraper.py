@@ -56,7 +56,7 @@ def check_headlines(headlines: list[str], term: str):
         print(f'No matches found for: "{term}"')
         print('-------------------------------------')
 
-def main():
+def main_headlineScraper():
     soup: BeautifulSoup = get_soup()
     headlines: list[str] = get_headlines(soup=soup)
 

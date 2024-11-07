@@ -1,5 +1,8 @@
 import time
-from CryptoData import get_coins, Coin
+try:
+    from .CryptoData import get_coins, Coin  # Relative import for package execution
+except ImportError:
+    from CryptoData import get_coins, Coin   # Direct execution
 
 def alert(symbol: str, bottom: float, top: float, coins_list: list[Coin]):
     """Creates an alert for the given price range of a coin"""
@@ -12,7 +15,7 @@ def alert(symbol: str, bottom: float, top: float, coins_list: list[Coin]):
             else:
                 print(coin)
 
-if __name__ == '__main__':
+def main_run_cryptoAlerter():
     coins: list[Coin] = get_coins()
 
     # A loop for these to create live alerts
@@ -21,3 +24,6 @@ if __name__ == '__main__':
         alert('btc', bottom=20_000, top=28_000, coins_list=coins)
         alert('eth', bottom=1800, top=1900, coins_list=coins)
         alert('xrp', bottom=0.47, top=0.48, coins_list=coins)
+
+if __name__ == '__main__':
+    main_run_cryptoAlerter()

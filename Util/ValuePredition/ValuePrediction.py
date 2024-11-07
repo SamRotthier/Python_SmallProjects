@@ -2,7 +2,11 @@
 #pip install pandas
 #pip install matplotlib
 
-from Model import Prediction
+
+try:
+    from .Model import Prediction
+except ImportError:
+    from Model import Prediction
 
 import numpy as np
 import pandas as pd
@@ -59,7 +63,7 @@ def display_plot(inputs: list[float], outputs: list[float], y_line):
     plt.plot(inputs, y_line, color='r')
     plt.show()
 
-if __name__ == '__main__':
+def run_valuePrediction():
     # Create some sample data
     years: list[int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     earnings: list[int] = [1000, 800 ,2000, 1500, 3400, 3700, 4000, 3800, 5000, 4800] #the more linear the data, the better for our model
@@ -74,3 +78,6 @@ if __name__ == '__main__':
     #print('Year 40:', prediction.slope * 40)
     #print('Year 50:', prediction.slope * 50)
     #print(prediction.mean_absolute_error)
+
+if __name__ == '__main__':
+    run_valuePrediction()

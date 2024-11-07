@@ -2,7 +2,11 @@ import os
 from typing import Final
 import requests
 import json
-from Model import Weather, dt
+try:
+    from .Model import Weather, dt  # Relative import for package execution
+except ImportError:
+    from Model import Weather, dt # Direct execution
+
 
 # Constants
 dummy_dataJson = os.path.join(os.path.dirname(__file__),'./dummy_data.json')

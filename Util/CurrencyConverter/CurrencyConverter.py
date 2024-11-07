@@ -53,7 +53,7 @@ def convert_currency(amount: float, base: str, vs: str, rates: dict) -> float:
     print(f'{amount:,.2f} ({base}) is: {conversion:,.2f} ({vs})')
     return conversion
 
-def main():
+def main_currencyConverter():
     data: dict = get_rates(mock=True) #Mock true will get data from file and mock false will get data from api
     rates: dict = data.get('rates')
 

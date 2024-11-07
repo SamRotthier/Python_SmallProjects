@@ -40,8 +40,11 @@ def random():
     else:
         return {'Error': 'Please only enter numbers.'}
 
-if __name__ == '__main__':
+def main_run_publicApi():
     app.run()
+
+if __name__ == '__main__':
+    main_run_publicApi()
 
 # Improvements:
 #   - Host it live

@@ -2,7 +2,11 @@
 
 import os
 from discord import Intents, Client
-import Responses
+try:
+    from . import Responses  # Relative import for package execution
+except ImportError:
+    import Responses   # Direct execution
+
 
 def run_bot(token: str):
     """Run our Discord Bot with the token provided"""

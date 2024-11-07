@@ -2,7 +2,11 @@ import smtplib, ssl
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import Credentials
+try:
+    from . import Credentials  # Relative import for package execution
+except ImportError:
+    import Credentials   # Direct execution
+
 
 def create_image_attachment(path: str) -> MIMEImage:
    """Create an image type for our email and add a header to it."""

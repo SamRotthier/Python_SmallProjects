@@ -4,9 +4,13 @@
 import pandas as pd
 from tabulate import tabulate
 from datetime import datetime
-from HabitTracker import track_habit, Habit
+try:
+    from .HabitTracker import track_habit, Habit  # Relative import for package execution
+except ImportError:
+    from HabitTracker import track_habit, Habit   # Direct execution
 
-def main():
+
+def main_habitTracker():
     # Habits
     habits: list[Habit] = [
         track_habit('Coffee', datetime(2023,5,6,8), cost=1, minutes_used=5),
