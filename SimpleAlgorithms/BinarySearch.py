@@ -5,7 +5,7 @@
 
 from typing import List
 
-class Solution:
+class Solution_BinarySearch:
     def search(self, nums: List[int], target: int):
         l = 0 # at the start in this example this will be pos0,value'-1'
         r = len(nums)-1 # at the start in this example this will be pos4,value'7'
@@ -60,7 +60,7 @@ class Solution:
 
 
 if __name__ == '__main__':
-    solution = Solution()
+    solution = Solution_BinarySearch()
     nums = sorted([-1,5,3,0,7]) # -> Binary search algoritm needs a sorted list
     result = solution.search(nums=nums, target=0)
     result = solution.search_with_prints(nums=nums, target=0)
