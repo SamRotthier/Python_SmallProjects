@@ -10,8 +10,5 @@ def main():
                 print(seen_letters)
 
 
-    
-    
-
 if __name__ == '__main__':
         main()

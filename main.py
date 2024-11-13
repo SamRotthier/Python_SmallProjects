@@ -46,7 +46,7 @@ while True:
         try:
             print("What would game would you like to play:")
             print("1)Math Libs")
-            print("2)Random Number (1-10)")
+            print("2)Random Number Guessing (1-10)")
             print("3)Dice Simulator")
             print("4)Hangman")
             print("5)Rock paper scissors")

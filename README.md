@@ -9,30 +9,30 @@ I use this as a "Tryout Park" for Python.
     except ImportError:
         import Responses   # Direct execution
 
-# Course
+# Course - 30 Great Python Projects
 Most of the projects are from the Udemy course "30 Great Python Projects To Help You Master It In 2024"
 ## projects from the course:
-1. Mad Libs
-2. Number Guessing
-3. Dice Simulator
+1. Mad Libs 
+2. Number Guessing 
+3. Dice Simulator 
 4. Hangman
 5. Rock Paper Scissors
 6. Password Generator
 7. QR Code Generator
-8. Website checker
+8. Website checker -> If the website is reachable
 9. Common Password Checker
-10. Brute Force
+10. Brute Force -> Check brute forcing of a given password
 11. Image Downloader
-12. Tax Calculator
+12. Tax Calculator -> with UI
 13. File Sorter
-14. Sentiment Analysis Bot
+14. Sentiment Analysis Bot -> For a text
 15. URL Shortener
 16. PDF Reader
 17. Chat Bot
 18. Email Scraper
-19. Cryptocurrency Alerter
+19. Cryptocurrency Alerter -> alert for a certain value
 20. Public Api
-21. Habit Tracker
+21. Habit Tracker -> tracks if you broke your habit yet
 22. Currency Converter
 23. Headline Scraper
 24. Distance Calculator

@@ -42,6 +42,7 @@ class Solution_PerfectSquare:
         return False 
     
     def IsPerfectSquare_with_prints(self, num: int):
+
         l = 1 
         print('Start value of l=', l)
         r = num 

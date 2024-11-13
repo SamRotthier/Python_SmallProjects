@@ -70,7 +70,7 @@ def main_headlineScraper():
 
 
 if __name__ == '__main__':
-        main()
+        main_headlineScraper()
 
 #Improvement: 
 #   - The script does not check if its a word just if the letters are used somewhere 
