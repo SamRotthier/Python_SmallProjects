@@ -1,5 +1,6 @@
 # This is a collection of a few small python projects.
 I use this as a "Tryout Park" for Python.
+It has some projects from different courses and videos.
 
 ## Learned lessons
 - You can make a requirements file with the command "pip freeze > requirements.txt"
